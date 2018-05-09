@@ -4,7 +4,7 @@ let inputFile = args[2];
 let inputBalance = args[3];
 
 // find closest pair sum to target value
-// assumes csv format is always 'item name, price\n'...
+// assumes correct format is 'item name, price\n'...
 // assumes file is always correct format
 
 // find closest pair or exact pair
@@ -50,7 +50,8 @@ function findPairExact(file, balance){
     balance = Number(balance);
 
     for(let item of prices){ //Time: O(n) Space: O(1)
-        let [name, cost] = item,
+        let name = item[0],
+          cost = Number(item[1]),
           diff = balance - cost;
 
         if(cost > balance) break;

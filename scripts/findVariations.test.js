@@ -1,4 +1,4 @@
-const { checkInput } = require('./xo');
+const { checkInput } = require('./findVariations');
 
 describe('X0 Tests', () => {
     // describe('getDeliveries', () => {
