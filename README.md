@@ -16,7 +16,7 @@ From CLI:
 * n/a
 
 #### #2 Pairs
-* `npm run pair`
+* `npm run pairs`
 * `node scripts/findPair.js prices.txt 2500`
 
 #### #3 Permutations
@@ -25,7 +25,7 @@ From CLI:
 
 #### Tests
 * `npm run test`
-* `npm run test-pair`
+* `npm run test-pairs`
 * `npm run tests-variations`
 
 ## Tools & Technologies

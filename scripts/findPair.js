@@ -1,7 +1,7 @@
 const args = process.argv;
 let fs = require('fs');
-let inputFile = args[2];
-let inputBalance = args[3];
+let inputFile = args[2] || '../assets/prices.txt';
+let inputBalance = args[3] || 2500;
 
 // find closest pair sum to target value
 // assumes correct format is 'item name, price\n'...
@@ -9,13 +9,21 @@ let inputBalance = args[3];
 
 // find closest pair or exact pair
 function findPair(file, balance){ //Time: O(n + n/2 + m) => O(n) Space: O(n)
-    if(!file || (!balance && balance !== 0)) return 'Please check your inputs.';
+    let prices;
 
-    let prices = fs.readFileSync(file, 'utf8').trim().split('\n').map(ele => ele.split(', ')); //Time: O(n) Space: O(n)
-    let result = null;
+    try{
+        prices = fs.readFileSync(file, 'utf8').trim();
+    }catch(err){
+        return 'Please check your input file path.'
+    }
+
+    if(!checkInput(prices, balance)) return 'Please check your inputs.';
+
+    prices = prices.split('\n').map(ele => ele.split(', ')); //Time: O(n) Space: O(n)
     balance = Number(balance);
-    let minDiff = Infinity;
 
+    let minDiff = Infinity;
+    let result = null;
     let pointerLeft = 0,
         pointerRight = prices.length-1;
 
@@ -41,34 +49,34 @@ function findPair(file, balance){ //Time: O(n + n/2 + m) => O(n) Space: O(n)
     return 'Not possible'
 }
 
-// finds exact pair only Time: O(n) Space: O(n)
-function findPairExact(file, balance){
-    if(!file || !balance) return 'Please check your inputs.';
+function checkInput(file,balance){
+    if(!file || !file.length || (!balance && balance !== 0) || (!Number(balance) && balance !== 0) || file[0] === ',') return false;
 
-    let prices = fs.readFileSync(file, 'utf8').trim().split('\n').map(ele => ele.split(', ')); //Time: O(n) Space: O(n)
-    let pricesMap = new Map();
-    balance = Number(balance);
+    let start = 0,
+        end = file.length-1;
 
-    for(let item of prices){ //Time: O(n) Space: O(1)
-        let name = item[0],
-          cost = Number(item[1]),
-          diff = balance - cost;
+    for(let i=0; i<file.length; i++){
+        start = i;
+        let item = file.slice(start, end);
+        let newline = item.indexOf('\n');
+        let comma = item.indexOf(', ');
+        let name, cost;
 
-        if(cost > balance) break;
+        if(newline > 0) end = newline;
+        if(comma < 0) return false;
 
-        if(!pricesMap.has(cost)){ //Time: O(1)
-            pricesMap.set(cost, name);
-        }
-
-        if(pricesMap.has(diff)){ //Time: O(1)
-            return `${pricesMap.get(diff)} ${diff}, ${pricesMap.get(cost)} ${cost}`;
-        }
+        name = item.slice(0, comma);
+        cost = Number(item.slice(comma+2, end));
+        if(!name.length || !cost) return false;
+        
+        i += end+1;
+        end = file.length-1;
     }
 
-    return 'Not possible'
+    return true;
 }
 
 console.log(findPair(inputFile,inputBalance));
 
-module.exports = { findPair };
+module.exports = { findPair, checkInput };
 

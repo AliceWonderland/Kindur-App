@@ -1,4 +1,4 @@
-const { findPair } = require('./findPair');
+const { findPair, checkInput } = require('./findPair');
 
 describe('Exercise #2 - findPair Tests', () => {
     describe('Example Balances', () => {
@@ -19,6 +19,35 @@ describe('Exercise #2 - findPair Tests', () => {
         });
         test('tests 0', () => {
             expect(findPair('assets/prices.txt', 0)).toBe('Not possible');
+        });
+        test('doesn\'t accept invalid file path', () => {
+            expect(findPair('blob', 0)).toBe('Please check your input file path.');
+        });
+    });
+    describe('Check Inputs', () => {
+        test('accepts a Single Line Input', () => {
+            expect(checkInput('Candy Bar, 500', 2500)).toBeTruthy();
+        });
+        test('doesn\'t accept blank title', () => {
+            expect(checkInput(', 500\nHeadphones, 800', 10000)).toBeFalsy();
+        });
+        test('doesn\'t accept non-integer for cost', () => {
+            expect(checkInput('Candy Bar, 500\nHeadphones, www', 2300)).toBeFalsy();
+        });
+        test('doesn\'t accept blank for cost', () => {
+            expect(checkInput('Candy Bar, \nHeadphones, 800', 2300)).toBeFalsy();
+        });
+        test('accepts 0 for balance', () => {
+            expect(checkInput('Candy Bar, 500\nHeadphones, 800', 0)).toBeTruthy();
+        });
+        test('doesn\'t accept invalid str for prices', () => {
+            expect(checkInput(2500,2500)).toBeFalsy();
+        });
+        test('doesn\'t accept empty str for prices', () => {
+            expect(checkInput('',2500)).toBeFalsy();
+        });
+        test('doesn\'t accept blank for balance', () => {
+            expect(checkInput('Candy Bar, 500\nHeadphones, 800')).toBeFalsy();
         });
     });
 });
