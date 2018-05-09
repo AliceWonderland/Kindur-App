@@ -7,7 +7,6 @@ let inputBalance = args[3] || 2500;
 // assumes correct format is 'item name, price\n'...
 // assumes file is always correct format
 
-// find closest pair or exact pair
 function findPair(file, balance){ //Time: O(n + n/2 + m) => O(n) Space: O(n)
     let prices;
 

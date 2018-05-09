@@ -1,7 +1,7 @@
 # Kindur App
 3 Exercises in Javascript
 * Simple API Service
-* Find Pair Algorithm
+* Find Pairs Algorithm
 * Find Permutations Algorithm
 
 ## Installation

@@ -41,11 +41,8 @@ function variations(input){
         }
     }
 
-    function logMapElements(value, key, map) {
-        console.log(`[${key}] = ${value}`);
-    }
 
-    map.forEach(logMapElements);
+
 
     console.log(map);
 }
@@ -53,9 +50,9 @@ function variations(input){
 function checkInput(input){
     // accepts str, return bool
     // check for null, empty str, and 10X
-    // X must be uppercase
 
     if(!input || !input.length) return false;
+    input = input.toUpperCase();
 
     let set = new Set(['1','0','X']);
 
