@@ -1,0 +1,15 @@
+{
+  "name": "kindur",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "jest --watchAll",
+    "test-xo": "jest xo.test.js --watch",
+    "test-gift": "jest gift.test.js --watch"
+  },
+  "author": "Alice Chuang",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^22.4.3"
+  }
+}
