@@ -4,8 +4,10 @@
   "description": "",
   "scripts": {
     "test": "jest --watchAll",
-    "test-xo": "jest xo.test.js --watch",
-    "test-gift": "jest gift.test.js --watch"
+    "test-pair": "jest scripts/findPair.test.js --watch",
+    "test-variations": "jest scripts/findVariations.test.js --watch",
+    "pairs": "node scripts/findPair.js prices.txt 2500",
+    "variations": "node scripts/findVariations.js '10X10X0'"
   },
   "author": "Alice Chuang",
   "license": "ISC",

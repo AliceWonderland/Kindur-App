@@ -5,19 +5,28 @@
 * Find Permutations Algorithm
 
 ## Installation
+Make sure Node.js is installed `node -v`. If not, install below.
+
 From CLI:
 * `git clone https://github.com/AliceWonderland/Kindur-App.git`
 * `npm install`
 
 ## To Run + Test
-#### API
+#### #1 API
 * n/a
 
-#### Pairs
-* node scripts/findVariations.js prices.txt 2500
+#### #2 Pairs
+* `npm run pair`
+* `node scripts/findPair.js prices.txt 2500`
 
-#### Permutations
-* node scripts/findVariations.js '10X10X0'
+#### #3 Permutations
+* `npm run variations`
+* `node scripts/findVariations.js '10X10X0'`
+
+#### Tests
+* `npm run test`
+* `npm run test-pair`
+* `npm run tests-variations`
 
 ## Tools & Technologies
 * Node (NPM v5.6.0+ and Node v8.9.4+) https://nodejs.org/en/download/

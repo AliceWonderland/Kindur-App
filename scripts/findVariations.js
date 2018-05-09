@@ -1,22 +1,17 @@
 const args = process.argv;
 let input = args[2] || '10X10X0';
 
+// find all variations of '10X10X0' where:
+
 // $ myprogram X0
 // 00
 // 1
+
 // $ myprogram 10X10X0
 // 1001000
 // 1001010
 // 1011000
 // 1011010
-// $ myprogram
-// 10X10X0X
-// 10010000
-// 10010100
-// 10010101
-// 10110000
-// 10110100
-// 10110101
 
 // assumes any combination of 10X is valid input
 // 1X, XX, 00, X, XX1, 0X0, 111X, 0
@@ -74,4 +69,4 @@ function checkInput(input){
 console.log(checkInput(input));
 console.log(variations(input));
 
-module.exports = { checkInput };
+module.exports = { checkInput, variations };
