@@ -17,10 +17,8 @@ router.get('/messages', function (req, res, next) {
             console.error(err);
             process.exit(1);
         }
-
         data = JSON.parse(data);
         res.send(data);
-
     });
 });
 

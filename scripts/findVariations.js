@@ -40,10 +40,6 @@ function variations(input){
             }
         }
     }
-
-
-
-
     console.log(map);
 }
 

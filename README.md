@@ -17,7 +17,7 @@ From CLI:
 * `npm install`
 * `npm run start`
 * `curl -X POST -H "Content-Type: application/json" -d '{"message": "foo"}' http://localhost:4200/api/messages`
-* `curl http://localhost:4200/api/messages/b5bb9d8014a0f9b1d61e21e796d78dc cdf1352f23cd32812f4850b878ae4944c`
+* `curl http://localhost:4200/api/messages/2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae`
 
 #### #2 Pairs
 * `npm run pairs`
