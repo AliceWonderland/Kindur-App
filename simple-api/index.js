@@ -2,11 +2,6 @@
 const express = require('express');
 const app = express();
 
-// parsing middleware
-// const bodyParser = require('body-parser');
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
-
 app.get('/', (req, res) => res.send('Hello World!'));
 
 // routes
@@ -14,7 +9,7 @@ app.use('/api', require('./api'));
 
 // handle 404s
 app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
+    res.send('404');
 });
 
 // handle 500s

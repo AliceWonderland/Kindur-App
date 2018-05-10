@@ -9,7 +9,6 @@
   "author": "Alice Chuang",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.2",
     "express": "^4.16.3",
     "pg": "^7.4.3",
     "pg-hstore": "^2.3.2",
