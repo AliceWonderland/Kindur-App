@@ -18,5 +18,5 @@ This api writes hashed messages to a txt file using Node FS, Node Crypto, Expres
 * cURL (CLI Url Test Tool) https://curl.haxx.se/
 
 ### Resources
-* Node Crypto https://nodejs.org/docs/latest/api/crypto.html#crypto_crypto_createhash_algorithm_options
+* Node Crypto https://nodejs.org/docs/latest/api/crypto.html#crypto_crypto_createhash_algorithm_options, https://medium.com/@chris_72272/what-is-the-fastest-node-js-hashing-algorithm-c15c1a0e164e
 * Promises https://www.frankmitchell.org/2017/06/promise-objects/

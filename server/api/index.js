@@ -4,6 +4,7 @@ const fs = require('fs');
 
 // reads/writes to a txt file, jsondb.txt
 const jsondb = 'db/jsondb.txt';
+const hash = crypto.createHash('sha256');
 
 //api root
 router.get('/', function (req, res, next) {
@@ -33,7 +34,6 @@ router.post('/messages', function (req, res, next) {
         requestDataKey = Object.values(requestData)[0];
         requestDataValue = Object.values(requestData)[0];
 
-        const hash = crypto.createHash('sha256');
         hash.update(requestDataValue);
         requestDataValue = hash.digest('hex');
     }
