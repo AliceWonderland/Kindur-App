@@ -79,8 +79,8 @@ router.post('/messages', function (req, res, next) {
 });
 
 //GET /api/messages/hash
-router.get('/messages/:id', function (req, res, next) {
-    let id = req.params.id;
+router.get('/messages/:hash', function (req, res, next) {
+    let id = req.params.hash;
 
     fs.readFile(jsondb, 'utf-8', (err, data) => {
         if (err) {
@@ -91,7 +91,6 @@ router.get('/messages/:id', function (req, res, next) {
         data = JSON.parse(data);
 
         let messages = data.messages;
-        console.log(messages[id]);
         if(messages[id]){
             let result = {"message": messages[id]};
              res.json(result);
