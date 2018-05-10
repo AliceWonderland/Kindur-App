@@ -93,14 +93,15 @@ router.get('/messages/:hash', function (req, res, next) {
             let result = {"message": messages[id]};
              res.json(result);
         }else{
+            console.log('blob',err);
             next(err);
         }
     });
 });
 
 //api/messages hash
-router.delete('/messages/:id', function (req, res, next) {
-    let id = req.params.id;
+router.delete('/messages/:hash', function (req, res, next) {
+    let id = req.params.hash;
 
    //delete message
 
@@ -108,7 +109,8 @@ router.delete('/messages/:id', function (req, res, next) {
 
 // handles 404s
 router.use(function (req, res, next) {
-    const err = new Error('Not found.');
+    const msg = JSON.stringify({"err_msg": "Message not found"});
+    const err = new Error(msg);
     err.status = 404;
     next(err);
 });
