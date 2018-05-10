@@ -43,7 +43,7 @@ function variations(input){
     console.log(map);
 }
 
-function checkInput(input){
+function checkInput(input){ //Time: O(n) Space: O(1)
     // accepts str, return bool
     // check for null, empty str, and 10X
 

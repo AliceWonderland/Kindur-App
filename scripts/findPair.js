@@ -8,6 +8,7 @@ let inputBalance = args[3] || 2500;
 // assumes file is always correct format
 
 function findPair(file, balance){ //Time: O(n + n/2 + m) => O(n) Space: O(n)
+    // accepts txt file, int, returns str
     let prices;
 
     try{
@@ -48,7 +49,8 @@ function findPair(file, balance){ //Time: O(n + n/2 + m) => O(n) Space: O(n)
     return 'Not possible'
 }
 
-function checkInput(file,balance){
+function checkInput(file,balance){ //Time: O(n) Space: O(1)
+    // accepts str, int, returns bool
     if(!file || !file.length || (!balance && balance !== 0) || (!Number(balance) && balance !== 0) || file[0] === ',') return false;
 
     let start = 0,
