@@ -66,6 +66,7 @@ router.post('/messages', function (req, res, next) {
         .then(data => {
             console.log(`sent ${data}, ${data.length} bytes`);
             let result = {"digest":hash};
+            res.setHeader('Content-Type', 'application/json');
             res.json(result);
         })
         .catch(err => {

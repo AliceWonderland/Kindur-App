@@ -37,4 +37,4 @@ From CLI:
 * Node (NPM v5.6.0+ and Node v8.9.4+) https://nodejs.org/en/download/
 * Javascript ES6 (Language)
 * Jest (Test Suite) https://facebook.github.io/jest/
-* See [`server/README.md`](https://github.com/AliceWonderland/Kindur-App/blob/master/server/README.md) for API Tools.
+* See [`server/README.md`](https://github.com/AliceWonderland/Kindur-App/blob/master/server/README.md) for API details.

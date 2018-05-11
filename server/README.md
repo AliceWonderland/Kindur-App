@@ -28,3 +28,5 @@ http://json.alicechuang.com/api/messages
 * Node Crypto https://nodejs.org/docs/latest/api/crypto.html#crypto_crypto_createhash_algorithm_options, https://medium.com/@chris_72272/what-is-the-fastest-node-js-hashing-algorithm-c15c1a0e164e
 * Promises https://www.frankmitchell.org/2017/06/promise-objects/
 * NGINX Reverse Proxy and Post https://serverfault.com/questions/763499/get-to-nginx-reverse-proxy-works-but-post-gives-me-a-502-bad-gateway-response?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+* Express Response Headers https://stackoverflow.com/questions/19696240/proper-way-to-return-json-using-node-or-express?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+* Content Types https://en.wikipedia.org/wiki/Media_type
