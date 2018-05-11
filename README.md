@@ -20,6 +20,7 @@ From CLI:
 * `curl -X POST -H "Content-Type: application/json" -d '{"message": "foo"}' http://localhost:4200/api/messages`
 * `curl http://localhost:4200/api/messages/2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae`
 * `curl -i http://localhost:4200/api/messages/oop`
+* http://localhost:4200/api/messages
 
 ##### Live
 * `curl -X POST -H "Content-Type: application/json" -d '{"message": "foo"}' http://json.alicechuang.com/api/messages`
