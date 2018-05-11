@@ -9,12 +9,13 @@ Make sure Node.js is installed `node -v`. If not, install below.
 
 From CLI:
 * `git clone https://github.com/AliceWonderland/Kindur-App.git`
+* `cd Kindur-App`
 * `npm install`
 
 ## To Run + Test
 #### #1 API
 ##### Locally
-* Browse to `server` folder
+* `cd server`
 * `npm install`
 * `npm run start`
 * `curl -X POST -H "Content-Type: application/json" -d '{"message": "foo"}' http://localhost:4200/api/messages`

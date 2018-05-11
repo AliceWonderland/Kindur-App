@@ -4,7 +4,7 @@ This api writes hashed messages to a txt file using Node FS, Node Crypto, Expres
 http://json.alicechuang.com/api/messages
 
 ## To Install, Run, Test
-* Browse to `server` folder
+* `cd server`
 * `npm install`
 * `npm run start`
 * `curl -X POST -H "Content-Type: application/json" -d '{"message": "foo"}' http://localhost:4200/api/messages`
