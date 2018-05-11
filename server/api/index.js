@@ -121,6 +121,7 @@ router.delete('/messages/:hash', function (req, res, next) {
 router.use(function (req, res, next) {
     const msg = JSON.stringify({"err_msg": "Message not found"});
     const err = new Error(msg);
+
     err.status = 404;
     next(err);
 });
