@@ -32,7 +32,6 @@ function findVariations(input){ //Time: O(n^m) Space: O(1)
 
     if(!checkInput) return 'Check input, please!';
 
-    let result = [];
     let index = input.indexOf('X'); //Time: O(n)
     if(index<0){
         console.log(input);

@@ -26,7 +26,8 @@ http://json.alicechuang.com/api/messages
 
 ### Resources
 * Node Crypto https://nodejs.org/docs/latest/api/crypto.html#crypto_crypto_createhash_algorithm_options, https://medium.com/@chris_72272/what-is-the-fastest-node-js-hashing-algorithm-c15c1a0e164e
-* Promises https://www.frankmitchell.org/2017/06/promise-objects/
-* NGINX Reverse Proxy and Post https://serverfault.com/questions/763499/get-to-nginx-reverse-proxy-works-but-post-gives-me-a-502-bad-gateway-response?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+* Promises https://www.frankmitchell.org/2017/06/promise-objects/, https://stackoverflow.com/questions/34628305/using-promises-with-fs-readfile-in-a-loop?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+* NGINX Reverse Proxy and Post https://serverfault.com/questions/763499/get-to-nginx-reverse-proxy-works-but-post-gives-me-a-502-bad-gateway-response?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa, https://www.digitalocean.com/community/tutorials/how-to-troubleshoot-common-http-error-codes
 * Express Response Headers https://stackoverflow.com/questions/19696240/proper-way-to-return-json-using-node-or-express?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
 * Content Types https://en.wikipedia.org/wiki/Media_type
+* Simple REST Api https://www.codementor.io/wapjude/creating-a-simple-rest-api-with-expressjs-in-5min-bbtmk51mq

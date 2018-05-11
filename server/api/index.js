@@ -75,6 +75,17 @@ router.post('/messages', function (req, res, next) {
         });
 
     });
+
+    function writeFile(path, data) {
+        return new Promise((resolve, reject) => {
+            fs.writeFile(path, data, (err) => {
+                if (err) {
+                    return reject(err);
+                }
+                resolve(data);
+            });
+        });
+    }
 });
 
 //GET /api/messages/hash
@@ -115,16 +126,5 @@ router.use(function (req, res, next) {
     err.status = 404;
     next(err);
 });
-
-function writeFile(path, data) {
-    return new Promise((resolve, reject) => {
-        fs.writeFile(path, data, (err) => {
-            if (err) {
-                return reject(err);
-            }
-            resolve(data);
-        });
-    });
-}
 
 module.exports = router;
