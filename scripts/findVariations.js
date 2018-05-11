@@ -1,11 +1,11 @@
 const args = process.argv;
-let input = args[2] || '10X10X011X';
+let input = args[2] || '10X10X0';
 
 // find all variations of '10X10X0' where:
 
 // $ myprogram X0
 // 00
-// 1
+// 10
 
 // $ myprogram 10X10X0
 // 1001000
@@ -38,9 +38,8 @@ function findVariations(input){ //Time: O(n^m) Space: O(1)
         console.log(input);
         return input;
     }
-    findVariations(input.slice(0,index) + '0' + input.slice(index+1));
-    findVariations(input.slice(0,index) + '1' + input.slice(index+1));
-    
+    findVariations(input.slice(0,index) + '0' + input.slice(index+1)); //Time: O(n)
+    findVariations(input.slice(0,index) + '1' + input.slice(index+1)); //Time: O(n)
 }
 
 function checkInput(input){ //Time: O(n) Space: O(1)
