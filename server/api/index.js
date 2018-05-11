@@ -4,7 +4,6 @@ const fs = require('fs');
 
 // reads/writes to a txt file, jsondb.txt
 const jsondb = 'db/jsondb.txt';
-const hash = crypto.createHash('sha256');
 
 //api root
 router.get('/', function (req, res, next) {
@@ -33,7 +32,7 @@ router.post('/messages', function (req, res, next) {
     if(requestData){
         requestDataKey = requestData[Object.keys(requestData)[0]];
         requestDataValue = requestData[Object.keys(requestData)[0]];
-
+        const hash = crypto.createHash('sha256');
         hash.update(requestDataValue);
         requestDataValue = hash.digest('hex');
     }
@@ -105,7 +104,6 @@ router.get('/messages/:hash', function (req, res, next) {
             let result = {"message": messages[id]};
              res.json(result);
         }else{
-            console.log('blob',err);
             next(err);
         }
     });
