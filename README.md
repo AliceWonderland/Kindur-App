@@ -13,12 +13,19 @@ From CLI:
 
 ## To Run + Test
 #### #1 API
+##### Locally
 * Browse to `server` folder
 * `npm install`
 * `npm run start`
 * `curl -X POST -H "Content-Type: application/json" -d '{"message": "foo"}' http://localhost:4200/api/messages`
 * `curl http://localhost:4200/api/messages/2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae`
 * `curl -i http://localhost:4200/api/messages/oop`
+
+##### Live
+* `curl -X POST -H "Content-Type: application/json" -d '{"message": "foo"}' http://json.alicechuang.com/api/messages`
+* `curl http://json.alicechuang.com/api/messages/2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae`
+* `curl -i http://json.alicechuang.com/api/messages/oop`
+* http://json.alicechuang.com/api/messages
 
 #### #2 Pairs
 * `npm run pairs`
