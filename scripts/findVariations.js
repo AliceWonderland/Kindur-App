@@ -59,6 +59,6 @@ function checkInput(input){ //Time: O(n) Space: O(1)
     return true;
 }
 
-console.log(findVariations(input));
+findVariations(input);
 
 module.exports = { findVariations, checkInput };

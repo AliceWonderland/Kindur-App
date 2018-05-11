@@ -22,16 +22,16 @@ From CLI:
 
 #### #2 Pairs
 * `npm run pairs`
-* `node scripts/findPair.js prices.txt 2500`
+* `node scripts/findPair.js assets/prices.txt 2500`
 * `npm run test-pairs`
 
 #### #3 Permutations
 * `npm run variations`
 * `node scripts/findVariations.js '10X10X0'`
-* `npm run tests-variations`
+* `npm run test-variations`
 
 #### Tests
-* `npm run test`
+* Run all tests `npm run tests` 
 
 ## Packages, Tools, & Technologies
 * Node (NPM v5.6.0+ and Node v8.9.4+) https://nodejs.org/en/download/
