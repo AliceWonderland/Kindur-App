@@ -21,8 +21,8 @@ http://json.alicechuang.com/api/messages
 ### Packages, Technologies, & Tools
 * Node https://nodejs.org/docs/latest/api/fs.html
 * Express.js (Server) https://expressjs.com/en/starter/hello-world.html
-* BodyParser (Request Body Parser)
-* Nodemon (Build Watcher)
+* BodyParser (Request Body Parser) https://github.com/expressjs/body-parser
+* Nodemon (Build Watcher) https://nodemon.io/
 * cURL (CLI Url Test Tool) https://curl.haxx.se/
 
 ### Resources

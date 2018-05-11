@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// root
 app.get('/', (req, res) => res.send('Hello World!'));
 
 // routes
@@ -24,4 +25,5 @@ app.use(function (err, req, res, next) {
     res.status(err.status || 500).send(err.message || 'Internal server error.');
 });
 
+// start server
 app.listen(4200, () => console.log('Listening on port 4200! Browse to http://localhost:4200!'));

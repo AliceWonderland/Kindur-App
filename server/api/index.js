@@ -109,7 +109,7 @@ router.get('/messages/:hash', function (req, res, next) {
     });
 });
 
-//api/messages hash
+//DELETE api/messages hash
 router.delete('/messages/:hash', function (req, res, next) {
     let id = req.params.hash;
 

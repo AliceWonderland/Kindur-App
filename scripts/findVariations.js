@@ -26,6 +26,7 @@ let input = args[2] || '10X10X0';
 // assumes any combination of 10X is valid input
 // 1X, XX, 00, X, XX1, 0X0, 111X, 0
 // min str len 1
+// recurse through slices
 
 function findVariations(input){ //Time: O(n^m) Space: O(1)
     // accepts string, returns str variations

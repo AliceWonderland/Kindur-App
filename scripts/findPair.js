@@ -6,6 +6,7 @@ let inputBalance = args[3] || 2500;
 // find closest pair sum to target value
 // assumes correct format is 'item name, price\n'...
 // assumes file is always correct format
+// checks pairs 2 items at a time, saves minDiff pairs, returns minDiff or exact pair
 
 function findPair(file, balance){ //Time: O(n + n/2 + m) => O(n) Space: O(n)
     // accepts txt file, int, returns str
