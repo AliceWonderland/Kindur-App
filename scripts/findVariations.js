@@ -28,7 +28,7 @@ let input = args[2] || '10X10X0';
 // min str len 1
 // recurse through slices
 
-function findVariations(input){ //Time: O(n^m) Space: O(1)
+function findVariations(input){ //Time: O(2^n) n = num x's Space: O(1)
     // accepts string, returns str variations
 
     if(!checkInput) return 'Check input, please!';
