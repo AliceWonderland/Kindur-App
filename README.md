@@ -13,7 +13,7 @@ From CLI:
 * `npm install`
 
 ## To Run + Test
-#### #1 API
+### #1 API
 ##### Locally
 * `cd server`
 * `npm install`
@@ -29,17 +29,17 @@ From CLI:
 * `curl -i http://json.alicechuang.com/api/messages/oop`
 * http://json.alicechuang.com/api/messages
 
-#### #2 Pairs
+### #2 Pairs
 * `npm run pairs`
 * `node scripts/findPair.js assets/prices.txt 2500`
 * `npm run test-pairs`
 
-#### #3 Permutations
+### #3 Permutations
 * `npm run variations`
 * `node scripts/findVariations.js '10X10X0'`
 * `npm run test-variations`
 
-#### Tests
+### Tests
 * Run all tests `npm run tests` 
 
 ## Packages, Tools, & Technologies
