@@ -1,5 +1,5 @@
 const args = process.argv;
-let input = args[2] || '10X10X0';
+let input = args[2] || '10X10X011X';
 
 // find all variations of '10X10X0' where:
 
@@ -13,34 +13,33 @@ let input = args[2] || '10X10X0';
 // 1011000
 // 1011010
 
+// $ myprogram 10X10X011X
+// 100100110
+// 100100111
+// 100101110
+// 100101111
+// 101100100
+// 101100101
+// 101101100
+// 101101101
+
 // assumes any combination of 10X is valid input
 // 1X, XX, 00, X, XX1, 0X0, 111X, 0
 // min str len 1
 
-function variations(input){
+function findVariations(input){ //Time: O(n^m) Space: O(1)
     // accepts string, returns str variations
 
     if(!checkInput) return 'Check input, please!';
 
-    if(input.length === 1 && input !== 'X') return input;
-
-    let map = new Map();
-
-    // save previously added combinations to map
-    for(let i=0; i<input.length; i++){
-        let ele = input[i];
-        if(ele === 'X'){
-            let key = input.slice(0,i+1);
-            let val = input.slice(0,i);
-
-            if(map.has(key)){
-                console.log(map.get(key));
-            }else{
-                map.set(key,[val+'0',val+'1']);
-            }
-        }
+    let index = input.indexOf('X'); //Time: O(n)
+    if(index<0){
+        console.log(input);
+        return input;
     }
-    console.log(map);
+    findVariations(input.slice(0,index) + '0' + input.slice(index+1));
+    findVariations(input.slice(0,index) + '1' + input.slice(index+1));
+    
 }
 
 function checkInput(input){ //Time: O(n) Space: O(1)
@@ -59,7 +58,10 @@ function checkInput(input){ //Time: O(n) Space: O(1)
     return true;
 }
 
-console.log(checkInput(input));
-console.log(variations(input));
+// console.log(checkInput(input));
+console.log(findVariations(input));
+// console.log(test(input));
 
-module.exports = { checkInput, variations };
+
+
+module.exports = { findVariations, checkInput };

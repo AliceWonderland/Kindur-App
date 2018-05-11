@@ -1,6 +1,6 @@
-const { checkInput } = require('./findVariations');
+const { findVariations, checkInput } = require('./findVariations');
 
-describe('X0 Tests', () => {
+describe('Exerxise #3 - Find Variations Tests', () => {
     // describe('getDeliveries', () => {
     //     test('parses input string to array', () => {
     //         expect(getDeliveries("5x5 (1, 3) (4, 4)")).toEqual([ [ 1, 3 ], [ 4, 4 ] ]);
@@ -21,9 +21,7 @@ describe('X0 Tests', () => {
     //         expect(getDirection('x',0,1)).toBe('E');
     //     });
     // });
-
-
-    describe('basic checks', () => {
+    describe('Check Inputs', () => {
         test('is not empty string', () => {
             expect(checkInput("")).toBeFalsy();
         });
