@@ -1,6 +1,6 @@
 # Kindur App
 3 Exercises in Javascript
-* Simple API Service
+* [Simple API Service](https://github.com/AliceWonderland/Kindur-App/tree/master/server)
 * Find Pairs Algorithm
 * Find Permutations Algorithm
 
