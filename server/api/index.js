@@ -31,8 +31,8 @@ router.post('/messages', function (req, res, next) {
     if(Object.keys(req.query).length) requestData = req.query;
 
     if(requestData){
-        requestDataKey = Object.values(requestData)[0];
-        requestDataValue = Object.values(requestData)[0];
+        requestDataKey = requestData[Object.keys(requestData)[0]];
+        requestDataValue = requestData[Object.keys(requestData)[0]];
 
         hash.update(requestDataValue);
         requestDataValue = hash.digest('hex');
